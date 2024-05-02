@@ -20,7 +20,9 @@ export default function App() {
               Discover food and information to support your journey towards a
               healther lifestyle.
             </p>
-            <Link className="btn btn-primary">Explore Food Items</Link>
+            <Link to="/foods" className="btn btn-primary">
+              Explore Food Items
+            </Link>
           </div>
         </section>
 
@@ -28,7 +30,9 @@ export default function App() {
           <div>
             <h2>Health Report</h2>
             <p>See health report.</p>
-            <Link className="btn btn-primary">View Report</Link>
+            <Link to="/report" className="btn btn-primary">
+              View Report
+            </Link>
           </div>
         </section>
       </main>

@@ -12,7 +12,7 @@ export const foodItemsData = [
 ];
 
 const Foods = () => {
-  const [selectedCategories, setSelectedCategories] = useState([]);
+  const [selectedCategories, setSelectedCategories] = useState(["All"]);
   /* 
   const handleCheckbox = (event) => {
     const value = event.target.value;
@@ -68,6 +68,7 @@ const Foods = () => {
             id="inlineCheckbox1"
             value="All"
             onChange={handleCheckbox}
+            defaultChecked
           />
           <label className="form-check-label" htmlFor="inlineCheckbox1">
             All
@@ -132,7 +133,7 @@ const Foods = () => {
               <h5>{food.name}</h5>
               <p>Calories : {food.calories}</p>
               <p>Categories : {food.category}</p>
-              <Link className="btn btn-primary" to={`/foods/:foodId`}>
+              <Link className="btn btn-primary" to={`/foods/${food.id}`}>
                 View Details
               </Link>
             </li>
